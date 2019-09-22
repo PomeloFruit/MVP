@@ -32,15 +32,18 @@ function loadTable(){
     console.log("loading table");
 
     recordItem.once('value').then(function(snapshot){
+        console.log(Object.keys(snapshot.val()));
+        /*
         var row = document.createElement("tr");
-        Object.keys(snapshot).forEach(function(key) {
-            console.log(key, snapshot[key]);
+        Object.keys(snapshot.value).forEach(function(key) {
+            console.log(key, snapshot.value[key]);
             
             var cell = document.createElement("td"); 
-            cell.innerHTML = snapshot[key]; 
+            cell.innerHTML = snapshot.value[key]; 
             row.appendChild(cell); 
         });
         table.appendChild(row);
+        */
     });
 }
 
